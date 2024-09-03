@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "3ef9e5c0-98f2-4d3f-88d3-8b51d7bdb99f",
+		"_postman_id": "94cfc61a-037e-4449-b25c-f88e19c2be95",
 		"name": "Movie Booking App",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34578936"
 	},
 	"item": [
 		{
@@ -10,18 +11,138 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": null
+				"url": {
+					"raw": ""
+				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "getAllMovies",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1.0/moviebooking/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1.0",
+								"moviebooking",
+								"all"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "193"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c1-hK/2nQh6dNGtpIj/5USyIayxOAw\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 31 Aug 2024 17:08:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Working\",\n    \"payload\": [\n        {\n            \"_id\": \"66d04b527a0099ec9b67c5b9\",\n            \"title\": \"Saripodha Shanivaram\",\n            \"theatre\": \"INOX Hyderabad\",\n            \"totaltickets\": 80,\n            \"availabletickets\": 0,\n            \"__v\": 0,\n            \"status\": \"SOLD OUT\"\n        }\n    ]\n}"
+				}
+			]
 		},
 		{
 			"name": "searchMovie",
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": null
+				"url": {
+					"raw": ""
+				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "searchMovie",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1.0/moviebooking/movies/search/Saripodha",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1.0",
+								"moviebooking",
+								"movies",
+								"search",
+								"Saripodha"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "193"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c1-hK/2nQh6dNGtpIj/5USyIayxOAw\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 31 Aug 2024 17:11:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Working\",\n    \"payload\": [\n        {\n            \"_id\": \"66d04b527a0099ec9b67c5b9\",\n            \"title\": \"Saripodha Shanivaram\",\n            \"theatre\": \"INOX Hyderabad\",\n            \"totaltickets\": 80,\n            \"availabletickets\": 0,\n            \"__v\": 0,\n            \"status\": \"SOLD OUT\"\n        }\n    ]\n}"
+				}
+			]
 		},
 		{
 			"name": "deleteMovie",
@@ -29,7 +150,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:3000/api/v1.0/moviebooking/Pulp Fiction/delete/5",
+					"raw": "http://localhost:3000/api/v1.0/moviebooking/delete/Indian 2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -39,9 +160,8 @@
 						"api",
 						"v1.0",
 						"moviebooking",
-						"Pulp Fiction",
 						"delete",
-						"5"
+						"Indian 2"
 					]
 				}
 			},
@@ -76,7 +196,73 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "registerUser",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\":\"Joel\",\r\n    \"lastname\":\"Bandi\",\r\n    \"phone\":991911910,\r\n    \"id\":\"Joe@01\",\r\n    \"email\":\"joel@gmail.com\",\r\n    \"password\":\"joel@2001\",\r\n    \"confirmpassword\":\"joel@2001\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1.0/moviebooking/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1.0",
+								"moviebooking",
+								"register"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "258"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"102-rYEoCs2yhg5IhnHP/jq71sQmTOY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 31 Aug 2024 17:07:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"succesfully registered\",\n    \"payload\": {\n        \"firstname\": \"Joel\",\n        \"lastname\": \"Bandi\",\n        \"phone\": 991911910,\n        \"email\": \"joel@gmail.com\",\n        \"id\": \"Joe@01\",\n        \"password\": \"$2a$05$d0.ko1MT6KIyh610mUbQ3em03jw7104tr4c0FmG6Or8N3xBkVJwKK\",\n        \"_id\": \"66d34dcbeca8525e9d07d87e\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "loginUser",
@@ -107,7 +293,73 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "loginUser",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"id\":\"Joe@01\",\r\n\"password\":\"joel@2001\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1.0/moviebooking/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1.0",
+								"moviebooking",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "193"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c1-Onoc/CG7QLKHsz99UcIUEzBZbSU\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 01 Sep 2024 04:47:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"logged in succesfully\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkpvZUAwMSIsImlhdCI6MTcyNTE2NjAyMSwiZXhwIjoxNzI1MTY5NjIxfQ.4BYqpXsnx1kQejElgYL7k00VFIYRQO5x814CsEtLaXo\"\n}"
+				}
+			]
 		},
 		{
 			"name": "forgotPassword",
@@ -130,10 +382,68 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "forgotPassword",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1.0/moviebooking/Murthy@69/forgot",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1.0",
+								"moviebooking",
+								"Murthy@69",
+								"forgot"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "78"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4e-ZhxRkx8MHI1048YWKuyV/dTkQRA\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 29 Aug 2024 16:22:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"reset password email sent succesfully\",\n    \"email\": \"murthy@gmail.com\"\n}"
+				}
+			]
 		},
 		{
-			"name": "New Request",
+			"name": "resetpassword",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -162,16 +472,151 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"Murthy@01\",\r\n    \"confirmpassword\":\"Murthy@01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1.0/moviebooking/reset-password/a3282407d0cfca1ca9f4009d52f183b046e21221",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1.0",
+								"moviebooking",
+								"reset-password",
+								"a3282407d0cfca1ca9f4009d52f183b046e21221"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "40"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"28-hTSRyBekrEnxLzvdaYDCl9GIWZE\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 30 Aug 2024 04:31:28 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"password reset succesfully\"\n}"
+				}
+			]
 		},
 		{
 			"name": "addMovie",
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": null
+				"url": {
+					"raw": ""
+				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "addMovie",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Indian 2\",\r\n    \"theatre\":\"PVR Hyderabad\",\r\n    \"totaltickets\":100,\r\n    \"availabletickets\":100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1.0/moviebooking/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1.0",
+								"moviebooking",
+								"add"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "24"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"18-JuCMW0pkPCb3fQH6RPxndqZk3y8\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 31 Aug 2024 17:27:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Added movie successfully"
+				}
+			]
 		},
 		{
 			"name": "updateStatus",
@@ -203,25 +648,220 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "updateStatus",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ticket\":20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1.0/moviebooking/update/Saripodha Shanivaram",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1.0",
+								"moviebooking",
+								"update",
+								"Saripodha Shanivaram"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "173"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"ad-+R+IotLnGW7k6y9cZdL55bYU04g\""
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 31 Aug 2024 17:22:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"payload\": {\n        \"_id\": \"66d04b527a0099ec9b67c5b9\",\n        \"title\": \"Saripodha Shanivaram\",\n        \"theatre\": \"INOX Hyderabad\",\n        \"totaltickets\": 80,\n        \"availabletickets\": 60,\n        \"__v\": 0,\n        \"status\": \"BOOK ASAP\"\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "BookTicket",
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": null
+				"url": {
+					"raw": ""
+				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "BookTicket",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"Indian 2\",\r\n    \"theatre\":\"PVR Hyderabad\",\r\n    \"seats\":1,\r\n    \"seatnum\":[\"A1\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1.0/moviebooking/bookticket",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1.0",
+								"moviebooking",
+								"bookticket"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "153"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"99-ol+6SYMB5GySP4Trkp+i4KFz5s0\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 01 Sep 2024 04:55:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Tickets booked\",\n    \"payload\": {\n        \"title\": \"Indian 2\",\n        \"theatre\": \"PVR Hyderabad\",\n        \"seatnum\": [\n            \"A1\"\n        ],\n        \"seats\": 1,\n        \"_id\": \"66d3f3d5f50d94afbee75e5d\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
 		},
 		{
 			"name": "getTicketsbyId",
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": null
+				"url": {
+					"raw": ""
+				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "getTicketsbyId",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1.0/moviebooking/gettickets/Joe@01",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1.0",
+								"moviebooking",
+								"gettickets",
+								"Joe@01"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "154"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"9a-q32zLK1BBDuyQGQkKEmVpEQxDwI\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 01 Sep 2024 04:57:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Tickets Found\",\n    \"details\": [\n        {\n            \"_id\": \"66d3f3d5f50d94afbee75e5d\",\n            \"title\": \"Indian 2\",\n            \"theatre\": \"PVR Hyderabad\",\n            \"seatnum\": [\n                \"A1\"\n            ],\n            \"seats\": 1,\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
 		}
 	]
 }
